@@ -8,10 +8,10 @@ public interface IRepository<T> where T : class
     //CREATE - Adicionar novo dado
     //VOID = função sem retorno (é um procedimento)
     //() = Informação necessária que passa pro procedimento realizar algo (NOME E TIPO)
-    void Create(T model);
+    void Create(T model); //ADD
 
     // READ - Leitura de Dados
-    List<T> ReadAll();
+    List<T> ReadAll(); // GET
     T ReadById(int? id);
 
     //UPDATE - Atualizar um Dado
