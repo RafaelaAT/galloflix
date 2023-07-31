@@ -1,13 +1,17 @@
 using System.ComponentModel.DataAnnotations;
-
+using System.ComponentModel.DataAnnotations.Schema;
 namespace GalloFlix.Models;
 
+[Table("Genre")]
 public class Genre
 {
-    [Key] // Notaçãozinha pra chave primária - entende-se que esse Id é chave primária (NOTAÇÃO VEM SEMPRE ANTES DA PROPRIEDADE)
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public byte Id { get; set; }
-
-    [Required] // Requerido - Not Null no banco; torna o nome obrigatório
-    [StringLength(30)] // Tamanho máximo da propriedade
-    public string Name { get; set; } 
+    
+    [Display(Name = "Nome")]
+    [Required(ErrorMessage = "O nome do Gênero é obrigatório")]
+    [StringLength(30, ErrorMessage = "O Nome deve possuir no máximo 30 caracteres")]
+    public string Name { get; set; }    
+    public ICollection<MovieGenre> Movies { get; set; }
 }
