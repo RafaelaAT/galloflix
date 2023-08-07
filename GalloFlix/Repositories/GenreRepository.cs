@@ -1,5 +1,5 @@
 using System.Data;
-using galloflix.Interfaces;
+using GalloFlix.Interfaces;
 using GalloFlix.Models;
 using MySql.Data.MySqlClient;
 

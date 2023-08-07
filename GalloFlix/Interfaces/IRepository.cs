@@ -1,4 +1,4 @@
-namespace galloflix.Interfaces;
+namespace GalloFlix.Interfaces;
 
 //Interface genérica : te permite trabalhar com qualquer classe
 public interface IRepository<T> where T : class 

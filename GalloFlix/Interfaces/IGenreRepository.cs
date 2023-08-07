@@ -1,5 +1,5 @@
 using GalloFlix.Models;
-namespace galloflix.Interfaces;
+namespace GalloFlix.Interfaces;
 public interface IGenreRepository : IRepository<Genre>
 {
 }
